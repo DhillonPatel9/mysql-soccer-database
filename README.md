@@ -45,6 +45,6 @@ The league director has been keeping data in text-based documents (e.g., MS Word
 - The coach delegates team captain for each team
 - The coach decides roster
 - The coach tracks stats for each team and player
-- Stats consist of match score, goals, assists, possession %, pass counts, passing chains, and player tackels. 
+- Stats consist of match score, goals, assists, possession %, pass counts, passing chains, and player tackles. 
 - The coach tracks sponsor company name, address, and email of main contact
 - League director plans season schedule for all teams
