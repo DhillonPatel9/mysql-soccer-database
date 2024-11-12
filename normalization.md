@@ -46,6 +46,6 @@ ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Jersey_#, Home_T
 
 **TEAM**(<ins>Team_ID</ins>, Team_Name, Sponsor_ID)
 
-**>COACH**(<ins>Coach_ID</ins>, CoachFName, CoachMInitial, CoachLName, Coach_Age, Coach_Gender, Coach_Type, Team_ID)
+**COACH**(<ins>Coach_ID</ins>, CoachFName, CoachMInitial, CoachLName, Coach_Age, Coach_Gender, Coach_Type, Team_ID)
 
 **SPONSOR**(<ins>Sponsor_ID</ins>, Sponsor_Name, Sponsor_Address, Sponsor_Email)
