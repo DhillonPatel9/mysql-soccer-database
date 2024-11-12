@@ -1,52 +1,47 @@
-# Data Normalization
+### Normalization Steps
 
-ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#,  Jersey_#, Home_Team_Name, Away_Team_Name, Field_Name, Referee, Match_Score, Winner, Player_Name, Player_Position, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Player_Age, Player_Gender,  Season, IsTeam_Captain, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Name, Sponsor_Address, Sponsor_Email)
+ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Jersey_#, Home_Team_Name, Away_Team_Name, Field_Name, Referee, Match_Score, Winner, Player_Name, Player_Position, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Player_Age, Player_Gender, Season, IsTeam_Captain, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Name, Sponsor_Address, Sponsor_Email)
 
-1NF
+#### 1NF:
+**ALLDATA**(**Match_Date**, **Match_Start_Time**, **Team_Name**, **Park**, **Field_#**, **Jersey_#**, Home_Team_Name, Away_Team_Name, Field_Name, Referee, Match_Score, Winner, Player_Name, Player_Position, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Player_Age, Player_Gender, Season, IsTeam_Captain, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Name, Sponsor_Address, Sponsor_Email)
 
-ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#,  Jersey_#, Home_Team_Name, Away_Team_Name, Field_Name, Referee, Match_Score, Winner, Player_Name, Player_Position, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Player_Age, Player_Gender,  Season, IsTeam_Captain, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Name, Sponsor_Address, Sponsor_Email)
+#### 2NF
+**ALLDATA**(**Match_Date**, **Match_Start_Time**, **Team_Name**, **Park**, **Field_#**, **Jersey_#**, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Address, Sponsor_Email)
 
-2NF
+**FIELD**(**Park**, **Field_#**, Field_Name)
 
-ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#,  Jersey_#, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Address, Sponsor_Email)
+**MATCH**(**Match_Date**, **Match_Start_Time**, **Team_Name**, **Park**, **Field_#**, Home_Team_Name, Away_Team_Name, Referee, Match_Score, Winner, Season)
 
-FIELD(Park, Field_#, Field_Name)
+**PLAYER**(**Team_Name**, **Jersey_#**, Player_Name, Player_Position, Player_Age, Player_Gender, IsTeam_Captain)
 
-MATCH(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Home_Team_Name, Away_Team_Name, Referee, Match_Score, Winner, Season)
+**TEAM**(**Team_Name**, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Sponsor_Name)
 
-PLAYER(Team_Name, Jersey_#, Player_Name, Player_Position, Player_Age, Player_Gender, IsTeam_Captain)
+#### 3NF
+**ALLDATA**(**Match_Date**, **Match_Start_Time**, **Team_Name**, **Park**, **Field_#**, **Jersey_#**, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains)
 
-TEAM(Team_Name, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Sponsor_Name)
+**FIELD**(**Park**, **Field_#**, Field_Name)
 
-3NF
+**MATCH**(**Match_Date**, **Match_Start_Time**, **Team_Name**, **Park**, **Field_#**, Home_Team_Name, Away_Team_Name, Referee, Match_Score, Winner, Season)
 
-ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#,  Jersey_#, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains)
+**PLAYER**(**Team_Name**, **Jersey_#**, Player_Name, Player_Position, Player_Age, Player_Gender, IsTeam_Captain)
 
-FIELD(Park, Field_#, Field_Name)
+**TEAM**(**Team_Name**, Sponsor_Name)
 
-MATCH(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Home_Team_Name, Away_Team_Name, Referee, Match_Score, Winner, Season)
+**COACH**(**Coach_Name**, **Team_Name**, Coach_Age, Coach_Gender, Coach_Type)
 
-PLAYER(Team_Name, Jersey_#, Player_Name, Player_Position, Player_Age, Player_Gender, IsTeam_Captain)
+**SPONSOR**(**Sponsor_Name**, Sponsor_Address, Sponsor_Email)
 
-TEAM(Team_Name, Sponsor_Name)
+#### 3NF with Improvements
+**PLAYER_MATCH_STATS**(**Player_Stats_ID**, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Player_Tackles, Match_ID, Player_ID)
 
-COACH(Coach_Name, Team_Name, Coach_Age, Coach_Gender, Coach_Type)
+**FIELD**(**Field_ID**, Park, Field_#, Field_Name)
 
-SPONSOR(Sponsor_Name, Sponsor_Address, Sponsor_Email)
+**MATCH**(**Match_ID**, Match_Date, Match_Start_Time, Home_Team_Name, Away_Team_Name, RefereeFName, RefereeMInitial, RefereeLName, Match_Score, Winner, Season, Field_ID)
 
+**PLAYER**(**Player_ID**, Jersey_#, PlayerFName, PlayerMInitial, PlayerLName, Player_Position, Player_Age, Player_Gender, IsTeam_Captain, Team_ID)
 
-3NF WITH IMPROVEMENTS
+**TEAM**(**Team_ID**, Team_Name, Sponsor_ID)
 
-PLAYER_MATCH_STATS(Player_Stats_ID, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Player_Tackles, Match_ID, Player_ID)
+**COACH**(**Coach_ID**, CoachFName, CoachMInitial, CoachLName, Coach_Age, Coach_Gender, Coach_Type, Team_ID)
 
-FIELD(Field_ID, Park, Field_#, Field_Name)
-
-MATCH(Match_ID, Match_Date, Match_Start_Time, Home_Team_Name, Away_Team_Name, RefereeFName, RefereeMInitial, RefereeLName, Match_Score, Winner, Season, Field_ID)
-
-PLAYER(Player_ID, Jersey_#, PlayerFName, PlayerMInitial, PlayerLName, Player_Position, Player_Age, Player_Gender, IsTeam_Captain, Team_ID)
-
-TEAM(Team_ID, Team_Name, Sponsor_ID)
-
-COACH(Coach_ID, CoachFName, CoachMInitial, CoachLName, Coach_Age, Coach_Gender, Coach_Type, Team_ID)
-
-SPONSOR(Sponsor_ID, Sponsor_Name, Sponsor_Address, Sponsor_Email)
+**SPONSOR**(**Sponsor_ID**, Sponsor_Name, Sponsor_Address, Sponsor_Email)
