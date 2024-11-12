@@ -2,9 +2,9 @@
 
 ## Project Description:
 This fully normalized relational database (3NF) was developed for the fictitious Cincinnati Adult Soccer League (CASL) as a project for BUS 440 at NC State University. The database efficiently manages and queries team, player, coach, match, and sponsor data. The database enforces business rules to ensure data integrity, supporting CASL’s operations through features such as:
-	• Scheduling: Automates match scheduling across seasons and fields.
-	• Player & Team Statistics: Tracks key metrics like goals, assists, and match results.
-	• Sponsor Management: Records sponsor details and associations with teams.
+* Scheduling: Automates match scheduling across seasons and fields.
+* Player & Team Statistics: Tracks key metrics like goals, assists, and match results.
+* Sponsor Management: Records sponsor details and associations with teams.
 This database provides CASL with quick insights and reporting capabilities to facilitate league operations and enhance data accessibility.
 
 ## Use Case:
