@@ -1,12 +1,12 @@
-# Normalization Steps
+## Normalization Steps
 
 ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Jersey_#, Home_Team_Name, Away_Team_Name, Field_Name, Referee, Match_Score, Winner, Player_Name, Player_Position, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Player_Age, Player_Gender, Season, IsTeam_Captain, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Name, Sponsor_Address, Sponsor_Email)
 
-## 1NF:
+### 1NF:
 
 **ALLDATA**(<ins>Match_Date</ins>, <ins>Match_Start_Time</ins>, <ins>Team_Name</ins>, <ins>Park</ins>, <ins>Field_#</ins>, <ins>Jersey_#</ins>, Home_Team_Name, Away_Team_Name, Field_Name, Referee, Match_Score, Winner, Player_Name, Player_Position, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Player_Age, Player_Gender, Season, IsTeam_Captain, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Name, Sponsor_Address, Sponsor_Email)
 
-## 2NF
+### 2NF:
 
 **ALLDATA**(<ins>Match_Date</ins>, <ins>Match_Start_Time</ins>, <ins>Team_Name</ins>, <ins>Park</ins>, <ins>Field_#</ins>, <ins>Jersey_#</ins>, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Sponsor_Address, Sponsor_Email)
 
@@ -18,7 +18,7 @@ ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Jersey_#, Home_T
 
 **TEAM**(<ins>Team_Name</ins>, Coach_Name, Coach_Age, Coach_Gender, Coach_Type, Sponsor_Name)
 
-## 3NF
+### 3NF:
 
 **ALLDATA**(<ins>Match_Date</ins>, <ins>Match_Start_Time</ins>, <ins>Team_Name</ins>, <ins>Park</ins>, <ins>Field_#</ins>, <ins>Jersey_#</ins>, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains)
 
@@ -34,7 +34,7 @@ ALLDATA(Match_Date, Match_Start_Time, Team_Name, Park, Field_#, Jersey_#, Home_T
 
 **SPONSOR**(<ins>Sponsor_Name</ins>, Sponsor_Address, Sponsor_Email)
 
-## 3NF with Improvements
+### 3NF WITH IMPROVEMENTS:
 
 **PLAYER_MATCH_STATS**(<ins>Player_Stats_ID</ins>, Player_Goals, Player_Assists, Player_Possession_%, Player_Pass_Counts, Player_Passing_Chains, Player_Tackles, Match_ID, Player_ID)
 
