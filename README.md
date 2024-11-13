@@ -1,4 +1,4 @@
-# MySQL Soccer Database
+# MySQL Soccer League Database
 
 ## Project Description:
 This fully normalized relational database (3NF) was developed for the fictitious Cincinnati Adult Soccer League (CASL) as a project for BUS 440 at NC State University. The database efficiently manages and queries team, player, coach, match, and sponsor data. The database enforces business rules to ensure data integrity, supporting CASL’s operations through features such as:
