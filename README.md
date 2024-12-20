@@ -48,3 +48,22 @@ The league director has been keeping data in text-based documents (e.g., MS Word
 - Stats consist of match score, goals, assists, possession %, pass counts, passing chains, and player tackles. 
 - The coach tracks sponsor company name, address, and email of main contact
 - League director plans season schedule for all teams
+
+
+## Instructions to Interact With the Database:
+1. Clone the repository
+2. Run the command to build the Docker container:
+   
+   docker compose up --build
+   
+3. Open a new terminal and run the following commands to access MySQL Database:
+   
+   docker exec -it castldb_container bash
+   mysql -u root -p
+   
+4. Use root for the password
+5. Select the database:
+   
+   USE castldb;
+   
+6. Query the database using the sample-queries document
