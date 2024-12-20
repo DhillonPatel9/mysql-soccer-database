@@ -50,20 +50,25 @@ The league director has been keeping data in text-based documents (e.g., MS Word
 - League director plans season schedule for all teams
 
 
-## Instructions to Interact With the Database:
+## Instructions to Interact with the Database:
 1. Clone the repository
-2. Run the command to build the Docker container:
+2. Enter the mysql-soccer-database directory
+3. Run the command to build the Docker container:
    
    docker compose up --build
    
-3. Open a new terminal and run the following commands to access MySQL Database:
+4. Open a new terminal and run the following commands to access MySQL Database:
    
    docker exec -it castldb_container bash
+   
    mysql -u root -p
    
-4. Use root for the password
-5. Select the database:
+5. Use "root" for the password
+6. Select the database with this SQL line:
    
    USE castldb;
    
-6. Query the database using the sample-queries document
+7. Query the database (Sample queries are provided in the sample-queries.sql document)
+8. When finished run the following command to stop the container:
+
+   docker compose down
