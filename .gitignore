@@ -1,0 +1,55 @@
+# Node.js dependencies (if applicable)
+node_modules/
+
+# Python bytecode (if applicable)
+*.pyc
+*.pyo
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Log files
+*.log
+
+# IDE configurations (e.g., Visual Studio, IntelliJ)
+.vscode/
+.idea/
+
+# Database dumps or backups (if not needed for version control)
+*.sql
+*.sql.gz
+
+# Environment variables (e.g., for development secrets)
+.env
+*.env
+
+# Temporary files and directories
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Docker files (if not required to be versioned)
+**/Dockerfile*
+**/docker-compose.yml
+
+# Git-related files
+.gitmodules
+.rebase-apply
+
+# Public API Keys and Sensitive Information
+*.pem
+*.key
+*.crt
+*.p12
+
+# Temporary database-related files (e.g., MySQL, PostgreSQL)
+*.pid
+*.sock
+*.db
+
+# Migration files (if handled outside of version control or ignored by tool)
+migrations/
