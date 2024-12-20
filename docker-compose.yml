@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    container_name: castldb_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: castldb
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./02-data.sql:/docker-entrypoint-initdb.d/02-data.sql
