@@ -11,3 +11,6 @@ services:
     volumes:
       - ./01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
       - ./02-data.sql:/docker-entrypoint-initdb.d/02-data.sql
+      - ./03-create_procedure.sql:/docker-entrypoint-initdb.d/03-create_procedure.sql
+      - ./04-create_function.sql:/docker-entrypoint-initdb.d/04-create_function.sql
+      - ./05-create_view.sql:/docker-entrypoint-initdb.d/05-create_view.sql
