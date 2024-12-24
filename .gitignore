@@ -18,9 +18,16 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Database dumps or backups (if not needed for version control)
-*.sql
+# Database backups and dumps (exclude these)
 *.sql.gz
+*.bak
+*.tmp
+
+# Allow critical SQL files (schema, migrations, seeds, etc.)
+# Uncomment if needed:
+# !schema.sql
+# !migrations/
+# !seed.sql
 
 # Environment variables (e.g., for development secrets)
 .env
@@ -29,8 +36,6 @@ Thumbs.db
 # Temporary files and directories
 *.swp
 *.swo
-*.bak
-*.tmp
 
 # Docker files (if not required to be versioned)
 **/Dockerfile*
