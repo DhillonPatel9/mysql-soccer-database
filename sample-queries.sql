@@ -1,9 +1,6 @@
 -- Dhillon Patel Project 1
 USE castldb;
 
--- Includes age constraint as this is an adult league.
-ALTER TABLE player ADD CONSTRAINT age_check CHECK (player.player_age >=18);
-
 -- Show a sample match schedule
 SELECT 
   match_date, 
