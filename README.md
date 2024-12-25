@@ -49,26 +49,46 @@ The league director has been keeping data in text-based documents (e.g., MS Word
 - The coach tracks sponsor company name, address, and email of main contact
 - League director plans season schedule for all teams
 
+### How to Interact with the Soccer Database
 
-## Instructions to Interact with the Database:
-1. Clone the repository
-2. Enter the mysql-soccer-database directory
-3. Run the command to build the Docker container:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/mysql-soccer-database.git
+   ```
    
+2. **Navigate to the Database and Docker Files Directories**:
+   After cloning the repository, change to the `mysql-soccer-database` directory and then to the `docker-files` directory:
+   ```bash
+   cd mysql-soccer-database/docker-files
+   ```
+   
+3.	Build the Docker Container:
+Run the following command to build the Docker container:
+   ```bash
    docker compose up --build
-   
-4. Open a new terminal and run the following commands to access MySQL Database:
-   
-   docker exec -it castldb_container bash
-   
-   mysql -u root -p
-   
-5. Use "root" for the password
-6. Select the database with this SQL line:
-   
-   USE castldb;
-   
-7. Query the database (Sample queries are provided in the sample-queries.sql document)
-8. When finished run the following command to stop the container:
+   ```
 
+4.	Access the MySQL Database:
+Open a new terminal and run these commands to access the MySQL database:
+   ```bash
+   docker exec -it castldb_container bash
+   mysql -u root -p
+   ```
+
+5.	Enter the Password:
+Use "root" as the password when prompted.
+	
+6.	Select the Database:
+Use the following SQL command to select the castldb database:
+   ```sql
+   USE castldb;
+   ```
+
+7.	Query the Database:
+Sample queries are available in the sample-queries.sql file.
+
+8.	Stop the Docker Container:
+When finished, run this command to stop the container:
+   ```bash
    docker compose down
+   ```
