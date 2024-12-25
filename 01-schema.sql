@@ -71,6 +71,9 @@ CREATE TABLE `player` (
   CONSTRAINT `fk_player_team1` FOREIGN KEY (`team_id`) REFERENCES `team` (`team_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=143 DEFAULT CHARSET=utf8mb4;
 
+-- Add age constraint as this is an adult league.
+ALTER TABLE `player`
+ADD CONSTRAINT age_check CHECK (player.player_age >=18);
 
 CREATE TABLE `player_match_stats` (
   `player_stats_id` int NOT NULL AUTO_INCREMENT,
