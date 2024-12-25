@@ -85,7 +85,7 @@ Use the following SQL command to select the castldb database:
    ```
 
 7. **Query the Database**:
-Sample queries are available in the sample-queries.sql file.
+Sample queries are available in the sample-queries.sql file under the sql folder.
 
 8. **Stop the Docker Container**:
 When finished, run this command to stop the container:
