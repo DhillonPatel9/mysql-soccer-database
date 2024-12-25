@@ -62,32 +62,32 @@ The league director has been keeping data in text-based documents (e.g., MS Word
    cd mysql-soccer-database/docker-files
    ```
    
-3.	Build the Docker Container:
+3. **Build the Docker Container**:
 Run the following command to build the Docker container:
    ```bash
    docker compose up --build
    ```
 
-4.	Access the MySQL Database:
+4. **Access the MySQL Database**:
 Open a new terminal and run these commands to access the MySQL database:
    ```bash
    docker exec -it castldb_container bash
    mysql -u root -p
    ```
 
-5.	Enter the Password:
+5. **Enter the Password**:
 Use "root" as the password when prompted.
 	
-6.	Select the Database:
+6. **Select the Database**:
 Use the following SQL command to select the castldb database:
    ```sql
    USE castldb;
    ```
 
-7.	Query the Database:
+7. **Query the Database**:
 Sample queries are available in the sample-queries.sql file.
 
-8.	Stop the Docker Container:
+8. **Stop the Docker Container**:
 When finished, run this command to stop the container:
    ```bash
    docker compose down
