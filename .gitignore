@@ -38,8 +38,8 @@ Thumbs.db
 *.swo
 
 # Docker files (if not required to be versioned)
-**/Dockerfile*
-**/docker-compose.yml
+# **/Dockerfile*
+# **/docker-compose.yml
 
 # Git-related files
 .gitmodules
