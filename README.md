@@ -49,9 +49,9 @@ The league director plans the season schedule for all the teams. The league dire
 
 ### How to Interact with the Soccer Database
 
-1. **Clone the Repository**:
+1. **Clone the Repository in Your Terminal**:
    ```bash
-   git clone https://github.com/your-username/mysql-soccer-database.git
+   git clone https://github.com/DhillonPatel9/mysql-soccer-database.git
    ```
    
 2. **Navigate to the Database and Docker Files Directories**:
